@@ -16,7 +16,7 @@ async function SendMail(targetForm) {
         formFieldErrors = false;
 
         // try to run the mail API and pass the form data through via POST
-    let result = await fetch(`./includes/${targetForm.getAttribute("action")}`, {
+    let result = await fetch(`./${targetForm.getAttribute("action")}`, {
         method: targetForm.method,
         body: formData,
     }).then(response => {
